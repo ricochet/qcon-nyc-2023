@@ -1,0 +1,9 @@
+package component:rustacean
+
+interface greeting {
+    hello: func(greeting: string) -> string
+}
+
+world critter {
+    export greeting
+}

@@ -1,0 +1,4 @@
+dependencies:
+  gopher: ./go/gopher/gopher.component.wasm
+  rustacean: ./rust/crates/rustacean/target/wasm32-wasi/release/rustacean.wasm
+  app: ./rust/crates/app/target/wasm32-wasi/release/app.wasm

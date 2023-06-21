@@ -1,0 +1,15 @@
+package component:app
+
+interface greeting {
+    hello: func(greeting: string) -> string
+}
+
+world app {
+    import gopher: interface {
+        hello: func(greeting: string) -> string
+    }
+    import rustacean: interface {
+        hello: func(greeting: string) -> string
+    }
+    export run: func() -> string
+}

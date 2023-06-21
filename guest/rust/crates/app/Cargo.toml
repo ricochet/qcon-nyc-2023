@@ -1,0 +1,20 @@
+[package]
+name = "app"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+wit-bindgen = { version = "0.6.0", default_features = false }
+
+[lib]
+crate-type = ["cdylib"]
+
+[package.metadata.component]
+package = "component:app"
+
+[package.metadata.component.target]
+path = "wit"
+
+[package.metadata.component.dependencies]
