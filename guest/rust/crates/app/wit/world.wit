@@ -11,5 +11,8 @@ world app {
     import rustacean: interface {
         hello: func(greeting: string) -> string
     }
+    import dino: interface {
+        hello: func(greeting: string) -> string
+    }
     export run: func() -> string
 }

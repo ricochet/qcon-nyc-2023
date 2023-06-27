@@ -41,12 +41,11 @@ popd || exit # app
 
 popd || exit # rust/crates
 
-# pushd js || exit
+pushd js/dino || exit
 
-# TODO once jco supports latest syntax 
-# npx jco componentize dino.js --wit dino.wit -o dino.component.wasm
+npx jco componentize dino.js --wit dino.wit -o dino.component.wasm
 
-# popd || exit # js
+popd || exit # js/dino
 
 wasm-tools compose --verbose --output linked.wasm rust/crates/app/target/wasm32-wasi/release/app.wasm --config config.yaml
 wasm-tools component wit linked.wasm
