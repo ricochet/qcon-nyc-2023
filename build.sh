@@ -3,7 +3,7 @@
 # Build the project
 echo "Building the project..."
 
-export COMPONENT_ADAPTER=./wasi_preview1_component_adapter.wasm
+export COMPONENT_ADAPTER=$(pwd)/wasi_preview1_component_adapter.wasm
 
 # Build guest components
 pushd guest || exit
