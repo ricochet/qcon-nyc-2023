@@ -5,11 +5,6 @@ edition = "2021"
 
 [dependencies]
 anyhow = "1.0.71"
-http = "0.2.9"
-http-body = "0.4.5"
-http-body-util = "0.1.0-rc.2"
-hyper = { version = "1.0.0-rc.3", features = ["full"] }
-lazy_static = "1.4.0"
 tokio = { version = "1.28.2", features = ["net", "rt-multi-thread", "macros"] }
 wasmtime = { path = "../../../bytecodealliance/wasmtime/crates/wasmtime" }
 wasmtime-wasi = { path = "../../../bytecodealliance/wasmtime/crates/wasi" }

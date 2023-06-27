@@ -60,10 +60,6 @@ async fn main() -> wasmtime::Result<()> {
 
     let instance = linker.instantiate_async(&mut store, &component).await?;
 
-    // let run = instance.get_typed_func::<(), (u32,)>(&mut store, "run")?;
-    // let ret = run.call_async(&mut store, ()).await?;
-    // println!("result of run:\n{}", ret.0);
-
     let run = instance.get_typed_func::<(), (String,)>(&mut store, "run")?;
     let ret = run.call_async(&mut store, ()).await?;
     println!("result of run:\n{}", ret.0);

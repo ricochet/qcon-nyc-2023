@@ -681,11 +681,6 @@ name = "host"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "http",
- "http-body 0.4.5",
- "http-body-util",
- "hyper",
- "lazy_static",
  "tokio",
  "wasmtime",
  "wasmtime-wasi",
@@ -701,17 +696,6 @@ dependencies = [
  "bytes",
  "fnv",
  "itoa",
-]
-
-[[package]]
-name = "http-body"
-version = "0.4.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d5f38f16d184e36f2408a55281cd658ecbd3ca05cce6d6510a176eca393e26d1"
-dependencies = [
- "bytes",
- "http",
- "pin-project-lite",
 ]
 
 [[package]]
@@ -733,7 +717,7 @@ dependencies = [
  "bytes",
  "futures-util",
  "http",
- "http-body 1.0.0-rc.2",
+ "http-body",
  "pin-project-lite",
 ]
 
@@ -767,7 +751,7 @@ dependencies = [
  "futures-util",
  "h2",
  "http",
- "http-body 1.0.0-rc.2",
+ "http-body",
  "httparse",
  "httpdate",
  "itoa",
@@ -895,12 +879,6 @@ checksum = "2f37a4a5928311ac501dee68b3c7613a1037d0edb30c8e5427bd832d55d1b790"
 dependencies = [
  "wasm-bindgen",
 ]
-
-[[package]]
-name = "lazy_static"
-version = "1.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
 
 [[package]]
 name = "leb128"
@@ -2034,7 +2012,7 @@ dependencies = [
  "anyhow",
  "bytes",
  "http",
- "http-body 1.0.0-rc.2",
+ "http-body",
  "http-body-util",
  "hyper",
  "rustls",
