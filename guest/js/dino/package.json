@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@bytecodealliance/componentize-js": "^0.0.8",
-    "@bytecodealliance/jco": "^0.9.2"
+    "@bytecodealliance/componentize-js": "^0.0.7",
+    "@bytecodealliance/jco": "^0.7.0"
   }
 }
