@@ -1,3 +1,8 @@
 {
-    "rust-analyzer.server.extraEnv": { "CARGO": "cargo-component" }
+    "rust-analyzer.server.extraEnv": {
+        "CARGO": "cargo-component"
+    },
+    "files.associations": {
+        "string.h": "c"
+    }
 }

@@ -1,6 +1,6 @@
-use bindings::{
-    exports::component::rustacean::greeting::Greeting,
-};
+cargo_component_bindings::generate!();
+
+use crate::bindings::exports::component::rustacean::greeting::Greeting;
 
 struct Component;
 
@@ -9,5 +9,3 @@ impl Greeting for Component {
         greeting + "\n<🦀>Hello"
     }
 }
-
-bindings::export!(Component);

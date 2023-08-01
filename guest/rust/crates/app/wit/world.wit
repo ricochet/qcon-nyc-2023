@@ -5,10 +5,16 @@ interface greeting {
 }
 
 world app {
-    import gopher: interface {
+    //import gopher: interface {
+    //    hello: func(greeting: string) -> string
+    //}
+    import rustacean: interface {
         hello: func(greeting: string) -> string
     }
-    import rustacean: interface {
+    //import dino: interface {
+    //    hello: func(greeting: string) -> string
+    //}
+    import cat: interface {
         hello: func(greeting: string) -> string
     }
     export run: func() -> string

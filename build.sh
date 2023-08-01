@@ -3,7 +3,7 @@
 # Build the project
 echo "Building the project..."
 
-export COMPONENT_ADAPTER=$(pwd)/wasi_preview1_component_adapter.wasm
+export COMPONENT_ADAPTER=$(pwd)/wasi_snapshot_preview1.reactor.wasm
 
 # Build guest components
 pushd guest || exit
@@ -41,12 +41,17 @@ popd || exit # app
 
 popd || exit # rust/crates
 
-# pushd js || exit
+pushd js/dino || exit
 
-# TODO once jco supports latest syntax 
-# npx jco componentize dino.js --wit dino.wit -o dino.component.wasm
+npx jco componentize dino.js --wit dino.wit -o dino.component.wasm
 
-# popd || exit # js
+popd || exit # js
+
+pushd c || exit # c
+
+make
+
+popd || exit # c
 
 wasm-tools compose --verbose --output linked.wasm rust/crates/app/target/wasm32-wasi/release/app.wasm --config config.yaml
 wasm-tools component wit linked.wasm
