@@ -1,6 +1,6 @@
 dependencies:
   # gopher: ./go/gopher/gopher.component.wasm
   # dino: ./js/dino/dino.component.wasm
-  rustacean: ./rust/crates/rustacean/target/wasm32-wasi/release/rustacean.wasm
+  rustacean: ./rust/crates/rustacean/target/wasm32-unknown-unknown/release/rustacean.wasm
   cat: ./c/critter.component.wasm
-  app: ./rust/crates/app/target/wasm32-wasi/release/app.wasm
+  app: ./rust/crates/app/target/wasm32-unknown-unknown/release/app.wasm

@@ -8,6 +8,6 @@ void exports_component_example_greeting_hello(critter_string_t *greeting, critte
     critter_string_set(&a, "\nGreetings from C! 🐱");
 
     // append critter to greeting and return
-    strcat(ret, a.ptr);
+    strcpy(ret->ptr, a.ptr);
     critter_string_free(&a);
 }

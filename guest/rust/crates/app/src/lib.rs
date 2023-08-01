@@ -13,7 +13,6 @@ impl App for Component {
     fn run() -> String {
         let greeting = "App::run() says hi to some critters:";
         // rustacean::hello(&dino::hello(&cat::hello(greeting)))
-        rustacean::hello(&cat::hello(greeting))
-
+       rustacean::hello(&cat::hello(greeting))
     }
 }
