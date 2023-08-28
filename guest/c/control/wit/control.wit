@@ -1,0 +1,9 @@
+package component:example
+
+interface control {
+    volt-var-ctrl: func(setp: float64, alpha: float64, gamma: float64, delta: float64, vavg: float64, kv: float64, cap: float64, dert: float64, qprev: float64) -> float64
+}
+
+world power {
+    export control
+}
